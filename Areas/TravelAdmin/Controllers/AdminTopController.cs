@@ -30,11 +30,28 @@ namespace Travel_MVC.Areas.TravelAdmin.Controllers
             if (ModelState.IsValid) {
                 if (SliderPhoto != null)
                 {//Şəkil əlavə etmə hissəsi burdan elave edilir
-                    WebImage img = new WebImage(SliderPhoto.InputStream);//WebImage using
-                    FileInfo flInfo = new FileInfo(SliderPhoto.FileName);//FileInfo using
-                    string fileName = "Slider"+Guid.NewGuid()+flInfo.Extension;
-                    img.Save("~/Upload/SliderPhoto/"+fileName);
-                    slider.SliderPhoto = "/Upload/SliderPhoto/" + fileName;
+                    if (SliderPhoto != null)
+                    {
+                        if (SliderPhoto.ContentLength > 0)
+                        {
+                            if (
+                             SliderPhoto.ContentType.ToLower() == "image/jpg" ||
+                             SliderPhoto.ContentType.ToLower() == "image/png" ||
+                             SliderPhoto.ContentType.ToLower() == "image/gif" ||
+                             SliderPhoto.ContentType.ToLower() == "image/bmp" ||
+                             SliderPhoto.ContentType.ToLower() == "image/jpeg" 
+                             ){
+                                WebImage img = new WebImage(SliderPhoto.InputStream);//WebImage using
+                                FileInfo flInfo = new FileInfo(SliderPhoto.FileName);//FileInfo using
+                                string fileName = "Slider" + Guid.NewGuid() + flInfo.Extension;
+                                img.Save("~/Upload/SliderPhoto/" + fileName);
+                                slider.SliderPhoto = "/Upload/SliderPhoto/" + fileName;
+                               
+                            }
+                        }
+                    }
+
+           
                 }
                 DB.TopSliders.Add(slider);
                 DB.SaveChanges();

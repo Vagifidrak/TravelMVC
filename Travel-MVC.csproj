@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\TravelAdmin\Controllers\AdminDiscoverLeftsController.cs" />
     <Compile Include="Areas\TravelAdmin\Controllers\AdminOurServicesController.cs" />
     <Compile Include="Areas\TravelAdmin\Controllers\AdminTopController.cs" />
     <Compile Include="Areas\TravelAdmin\Controllers\HomeController.cs" />
@@ -651,6 +652,11 @@
     <Content Include="Areas\TravelAdmin\Views\AdminOurServices\Details.cshtml" />
     <Content Include="Areas\TravelAdmin\Views\AdminOurServices\Edit.cshtml" />
     <Content Include="Areas\TravelAdmin\Views\AdminOurServices\Index.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Create.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Delete.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Details.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Edit.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -937,6 +943,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\TravelAdmin\Data\" />
+    <Folder Include="Upload\DiscoverPhoto\" />
     <Folder Include="Upload\SliderPhoto\" />
   </ItemGroup>
   <ItemGroup>
