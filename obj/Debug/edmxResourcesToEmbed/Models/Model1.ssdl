@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TravelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AllTours">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="300" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="600" />
+    <Property Name="Price" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactInform">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="200" />
+    <Property Name="MapX" Type="float" />
+    <Property Name="MapY" Type="float" />
+    <Property Name="fblink" Type="nvarchar" MaxLength="400" />
+    <Property Name="instalink" Type="nvarchar" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="DiscoverLeft">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="700" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DiscoverRight">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="300" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MoreInformation">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="300" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="600" />
+  </EntityType>
+  <EntityType Name="OurServices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="300" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IconPhoto" Type="nvarchar" MaxLength="600" />
+  </EntityType>
+  <EntityType Name="OurTeam">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkerName" Type="nvarchar" MaxLength="300" />
+    <Property Name="WorkerArea" Type="nvarchar" MaxLength="100" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="600" />
+  </EntityType>
+  <EntityType Name="Section2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="700" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="TopSlider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SliderPhoto" Type="nvarchar" MaxLength="700" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="300" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="TravelModelStoreContainer">
+    <EntitySet Name="AllTours" EntityType="Self.AllTours" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactInform" EntityType="Self.ContactInform" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiscoverLeft" EntityType="Self.DiscoverLeft" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiscoverRight" EntityType="Self.DiscoverRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MoreInformation" EntityType="Self.MoreInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OurServices" EntityType="Self.OurServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OurTeam" EntityType="Self.OurTeam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section2" EntityType="Self.Section2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TopSlider" EntityType="Self.TopSlider" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

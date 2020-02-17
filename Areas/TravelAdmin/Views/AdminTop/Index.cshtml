@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/TravelAdmin/Views/Shared/_Layout1.cshtml";
+}
+
+@model  IList<Travel_MVC.Models.TopSlider>
+
+    <p class="btn btn-outline-success">
+        <a href="@Url.Action("Create","AdminTop")">Create</a>
+    </p>
+    <table class="table table-bordered">
+        
+        <thead>
+            <tr>
+                <th>Sekil</th>
+                <th>Basliq</th>
+                <th>Melumat</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var tp in Model)
+            {
+                <tr>
+                    <td style="width:25%">
+                        <img class="img-fluid" src="@tp.SliderPhoto" />
+                    </td>
+                    <td>@tp.Header</td>
+                    <td>@tp.Description</td>
+                    <td>
+                        <a href="@Url.Action("Edit","AdminTop", new {id=tp.id})">Edit</a>|
+                        <a href="#">Delete</a>    
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+

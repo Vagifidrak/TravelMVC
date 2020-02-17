@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TravelModelStoreContainer" CdmEntityContainer="TravelDB">
+    <EntitySetMapping Name="AllTours">
+      <EntityTypeMapping TypeName="TravelModel.AllTour">
+        <MappingFragment StoreEntitySet="AllTours">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactInforms">
+      <EntityTypeMapping TypeName="TravelModel.ContactInform">
+        <MappingFragment StoreEntitySet="ContactInform">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="MapX" ColumnName="MapX" />
+          <ScalarProperty Name="MapY" ColumnName="MapY" />
+          <ScalarProperty Name="fblink" ColumnName="fblink" />
+          <ScalarProperty Name="instalink" ColumnName="instalink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiscoverLefts">
+      <EntityTypeMapping TypeName="TravelModel.DiscoverLeft">
+        <MappingFragment StoreEntitySet="DiscoverLeft">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiscoverRights">
+      <EntityTypeMapping TypeName="TravelModel.DiscoverRight">
+        <MappingFragment StoreEntitySet="DiscoverRight">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MoreInformations">
+      <EntityTypeMapping TypeName="TravelModel.MoreInformation">
+        <MappingFragment StoreEntitySet="MoreInformation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OurServices">
+      <EntityTypeMapping TypeName="TravelModel.OurService">
+        <MappingFragment StoreEntitySet="OurServices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IconPhoto" ColumnName="IconPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OurTeams">
+      <EntityTypeMapping TypeName="TravelModel.OurTeam">
+        <MappingFragment StoreEntitySet="OurTeam">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="WorkerName" ColumnName="WorkerName" />
+          <ScalarProperty Name="WorkerArea" ColumnName="WorkerArea" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Section2">
+      <EntityTypeMapping TypeName="TravelModel.Section2">
+        <MappingFragment StoreEntitySet="Section2">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TopSliders">
+      <EntityTypeMapping TypeName="TravelModel.TopSlider">
+        <MappingFragment StoreEntitySet="TopSlider">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="SliderPhoto" ColumnName="SliderPhoto" />
+          <ScalarProperty Name="Header" ColumnName="Header" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,268 @@
+﻿@using Travel_MVC.Models
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<section id="MainSlider">
+    <div class="container-fluid p-0">
+        <div class="mainSlider-all">
+            @foreach (TopSlider sld in ViewBag.sliderTop)
+             {
+                <div class="mainSlider-box">
+                    <img src=@sld.SliderPhoto>
+                    <div class="slider-texts ">
+                        <h6 data-aos="fade-right">@sld.Description</h6>
+                        <h2 data-aos="fade-left">@sld.Header</h2>
+                        <a href="#" data-aos="fade-right" class="hoverBtn">Get in Touch</a>
+                    </div>
+                </div>
+             }
+        </div>
+    </div>
+</section>
+
+
+<section id="Slider">
+    <div class="container">
+        <div class="slider-all">
+            <div class="slider-boxes row justify-content-center">
+                @foreach (Section2 sec in ViewBag.sectionTwo)
+                {
+                    <div data-aos="fade-up" data-aos-duration="1000" class="slider-box">
+
+                        <div class="slider-img">
+                            <a href="#"><img src=@sec.Photo></a>
+                        </div>
+                        <div class="slider-txt">
+                            <a href="#">
+                                <h4>@sec.Header</h4>
+                            </a>
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+            <div class="slider-arrow text-center">
+                <a href="collage.html">
+                    Other Tours <img style="width: 2%;margin-left: 5px;" src="~/TravelFront/image/right-arrow.png"
+                                     alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Discover - Start  -->
+
+<section id="Discover">
+    <div class="container">
+        <div class="disc-all row">
+            @foreach (DiscoverLeft disclft in ViewBag.DiscoLeft)
+            {
+                <div data-aos="fade-right" data-aos-duration="1000" class="col-md-12 col-lg-6 text-center">
+                    <img class="img-fluid" src="@disclft.Photo" alt="">
+                </div>
+            }
+
+            @foreach (DiscoverRight discrgt in ViewBag.DiscoRight)
+            {
+                <div data-aos="fade-left" data-aos-duration="1000" class="disc-right col-md-12 col-lg-6"
+                     style="padding-top: 3rem;padding-left: 3rem;">
+                    <a href="visit.html">
+                        <h2 style="font-size: 49px;line-height: 1.2; font-weight:600; margin-bottom: 20px;">@discrgt.Header</h2>
+                    </a>
+                    <div class="tab row justify-content-between" style="border-bottom: 2px solid transparent;margin: 0;">
+                        <button style="background: transparent;font-size: 18px;border: none;letter-spacing: .1em;"
+                                class="active   p-0 tablinks" onclick="openCity(event, 'London')">
+                            ABOUT US
+                        </button>
+                        <button style="background: transparent;color: #9b9b9b;font-size: 18px;border: none;letter-spacing: .1em;"
+                                class="p-0 tablinks" onclick="openCity(event, 'Paris')">
+                            OUR MISSION
+                        </button>
+                        <button style="background: transparent;color: #9b9b9b;font-size: 18px;border: none;letter-spacing: .1em;"
+                                class="p-0 tablinks" onclick="openCity(event, 'Tokyo')">
+                            OUR VISION
+                        </button>
+                    </div>
+                    <div id="London" class="tabcontent pt-3">
+                        <p>
+                            @discrgt.Description
+                        </p>
+                    </div>
+                    <div style="display: none;" id="Paris" class="tabcontent pt-3">
+                        <p>
+                            We are proud to offer excellent quality and value for money in our tours, which give you the chance to
+                            experience your chosen destination in an authentic and exciting way.
+                        </p>
+                    </div>
+                    <div style="display: none;" id="Tokyo" class="tabcontent pt-3">
+                        <p>
+                            Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for
+                            every travel service available in the industry.
+                        </p>
+                    </div>
+                    <div class="disc-btn">
+                        <a class="btn1" href="contact.html">Get in Touch</a>
+                        <a class="btn2" href="about.html">Read More</a>
+                    </div>
+                </div>
+
+             }
+        </div>
+    </div>
+</section>
+
+
+<!-- Discover - End  -->
+<!-- Services - Start  -->
+
+<section id="Services">
+    <div class="container">
+        <h3>Our Services</h3>
+        <div class="services-all row justify-content-center">
+            @foreach (OurService Osc in ViewBag.ServiceList)
+            {
+                <div data-aos="fade-right" data-aos-duration="1000" class="service-box row">
+                    <div class="col-md-3">
+                        <a href="services.html"><img style="width: 80%; margin-left: 15px" src=@Osc.IconPhoto alt="" srcset=""></a>
+                    </div>
+                    <div class="col-md-9">
+                        <a href="services.html">
+                            <h4>@Osc.Header</h4>
+                        </a>
+                        <a href="services.html">
+                            <p>@Osc.Description</p>
+                        </a>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Services - End  -->
+<!-- Tours - Start -->
+
+<section id="Tours">
+    <div class="container">
+        <div class="tours-all">
+            <h3>Hot Tours</h3>
+            <div class="tour-box row">
+
+                @foreach (AllTour alt in ViewBag.AllTour)
+                {
+                    <div data-aos="fade-right" data-aos-duration="1000" class="col-md-6 tour-img p-0">
+                        <img class="img-fluid" src="@alt.Photo" alt="">
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-duration="1000" class="col-md-6 tour-right">
+                        <div class="tour-right-text">
+                            <a href="">@alt.Header</a>
+                            <br>
+
+                            <a style="text-decoration: none; color: #fbb901; font-size: 18px;" href="">4 customer reviews</a>
+                            <p style="margin-bottom: 40px;margin-top: 10px;color: #9b9b9b;letter-spacing: .025em;">
+                                @alt.Description
+                            </p>
+                        </div>
+                        <a href="abouttour.html" class="tourBtn">Buy This Tour</a>
+                        <div class="tour-price">
+                            <p>@alt.Price</p>
+                        </div>
+                    </div>
+
+                 }
+            </div>
+        </div>
+    </div> 
+</section>
+
+
+
+<!-- Tours - End -->
+
+
+<section id="Person">
+    <div class="container">
+        <h3 data-aos="fade-down" data-aos-duration="1000"
+            style="font-weight: 600; text-align: center;margin-bottom: 4rem; font-size: 36px; color: #162e44; line-height: 1.2;">
+            Different People - One Mission
+        </h3>
+        <div class="row row-30 justify-content-center box-ordered">
+            @foreach (OurTeam otm in ViewBag.OurTeam)
+            {
+                <div data-aos="fade-up" data-aos-duration="1000" class="col-sm-6 col-md-5 col-lg-3">
+                    <!-- Team Modern-->
+                    <article class="team-modern">
+                        <div class="team-modern-header">
+                            <a class="team-modern-figure" href="#">
+                                <img class="img-circles"
+                                     src="@otm.Photo" alt="" width="118" height="118" />
+                            </a>
+                            <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70"
+                                 xml:space="preserve">
+                            <g>
+                            <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
+                            </g>
+                            </svg>
+                        </div>
+                        <div class="team-modern-caption text-center mt-2">
+                            <h6 class="team-modern-name"><a href="#">@otm.WorkerName</a></h6>
+                            <p style="color: #fbb901;font-size: 15px" class="team-modern-status">@otm.WorkerArea</p>
+                        </div>
+                    </article>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+@foreach (MoreInformation mrin in ViewBag.MoreInfo)
+{
+    <section id="Booking">
+        <div class="container">
+            <div class="booking-all">
+
+                <h3 data-aos="fade-right" data-aos-duration="1000">@mrin.Header</h3>
+                <p data-aos="fade-left" data-aos-duration="1000">
+                    @mrin.Description
+                </p>
+                <a data-aos="fade-up" data-aos-duration="1000" href="hotels.html">Get More Information</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="GalleryIndex">
+        <div class="container-fluid">
+            <h3 style="text-align: center; font-size: 15px;">GALLERY</h3>
+            <div class="gallery-all">
+                <a href="hotels.html">
+                    <div class="gallery-box">
+                        <div class="gallery-img">
+                            <img class="img-fluid" src="@mrin.Photo" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+}
+
+@*Burda qalmisam qalanini yigmaq*@
+
+
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+
