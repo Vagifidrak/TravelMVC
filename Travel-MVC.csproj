@@ -129,9 +129,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\TravelAdmin\Controllers\AdminDiscoverLeftsController.cs" />
+    <Compile Include="Areas\TravelAdmin\Controllers\AdminDiscoverRightsController.cs" />
     <Compile Include="Areas\TravelAdmin\Controllers\AdminOurServicesController.cs" />
     <Compile Include="Areas\TravelAdmin\Controllers\AdminTopController.cs" />
+    <Compile Include="Areas\TravelAdmin\Controllers\AllToursController.cs" />
     <Compile Include="Areas\TravelAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\TravelAdmin\Controllers\Section2Controller.cs" />
     <Compile Include="Areas\TravelAdmin\TravelAdminAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -657,6 +660,22 @@
     <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Details.cshtml" />
     <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Edit.cshtml" />
     <Content Include="Areas\TravelAdmin\Views\AdminDiscoverLefts\Index.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminTop\Delete.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverRights\Create.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverRights\Delete.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverRights\Details.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverRights\Edit.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AdminDiscoverRights\Index.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\Section2\Create.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\Section2\Delete.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\Section2\Details.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\Section2\Edit.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\Section2\Index.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AllTours\Create.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AllTours\Delete.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AllTours\Details.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AllTours\Edit.cshtml" />
+    <Content Include="Areas\TravelAdmin\Views\AllTours\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -943,7 +962,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\TravelAdmin\Data\" />
+    <Folder Include="Upload\AllTours\" />
     <Folder Include="Upload\DiscoverPhoto\" />
+    <Folder Include="Upload\Slider2\" />
     <Folder Include="Upload\SliderPhoto\" />
   </ItemGroup>
   <ItemGroup>

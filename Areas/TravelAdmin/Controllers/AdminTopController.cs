@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
@@ -26,10 +27,11 @@ namespace Travel_MVC.Areas.TravelAdmin.Controllers
 
         [HttpPost]
         public ActionResult Create(TopSlider slider,HttpPostedFileBase SliderPhoto)
-        {
+        {//Şəkil əlavə etmə hissəsi bu formada yazilaraq elave edilir
             if (ModelState.IsValid) {
+
                 if (SliderPhoto != null)
-                {//Şəkil əlavə etmə hissəsi burdan elave edilir
+                {
                     if (SliderPhoto != null)
                     {
                         if (SliderPhoto.ContentLength > 0)
@@ -50,8 +52,6 @@ namespace Travel_MVC.Areas.TravelAdmin.Controllers
                             }
                         }
                     }
-
-           
                 }
                 DB.TopSliders.Add(slider);
                 DB.SaveChanges();
@@ -83,5 +83,31 @@ namespace Travel_MVC.Areas.TravelAdmin.Controllers
 
             return View();
         }
+        // GET: TravelAdmin/AdminDiscoverLefts/Delete/5
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            TopSlider topSlider = DB.TopSliders.Find(id);
+            if (topSlider == null)
+            {
+                return HttpNotFound();
+            }
+            return View(topSlider);
+        }
+
+        // POST: TravelAdmin/AdminDiscoverLefts/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            TopSlider topSlider = DB.TopSliders.Find(id);
+            DB.TopSliders.Remove(topSlider);
+            DB.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

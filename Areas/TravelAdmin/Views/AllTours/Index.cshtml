@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Travel_MVC.Models.OurService>
+﻿@model IEnumerable<Travel_MVC.Models.AllTour>
 
 @{
     ViewBag.Title = "Index";
@@ -19,7 +19,10 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IconPhoto)
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
         </th>
         <th></th>
     </tr>
@@ -29,11 +32,14 @@
         <td>
             @Html.DisplayFor(modelItem => tp.Header)
         </td>
-        <td style="width:60%">
+        <td>
             @Html.DisplayFor(modelItem => tp.Description)
         </td>
-        <td style="width:10%"> 
-            <img class="img-fluid" src="@tp.IconPhoto" />
+        <td style="width:25%">
+            <img class="img-fluid" src="@tp.Photo"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => tp.Price)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=tp.id }) |
@@ -42,4 +48,5 @@
         </td>
     </tr>
 }
+
 </table>

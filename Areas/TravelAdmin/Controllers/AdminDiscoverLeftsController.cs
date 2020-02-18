@@ -44,8 +44,6 @@ namespace Travel_MVC.Areas.TravelAdmin.Controllers
         }
 
         // POST: TravelAdmin/AdminDiscoverLefts/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "id,Photo")] DiscoverLeft discoverLeft, HttpPostedFileBase LeftPhoto)
@@ -97,8 +95,6 @@ namespace Travel_MVC.Areas.TravelAdmin.Controllers
         }
 
         // POST: TravelAdmin/AdminDiscoverLefts/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "id,Photo")] DiscoverLeft discoverLeft)

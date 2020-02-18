@@ -18,13 +18,13 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
+@foreach (var tp in Model) {
+    <tr> 
         <td style=" width:25% ">
-            <img class="img-thumbnail" src="@item.Photo" />
+            <img class="img-fluid" src="@tp.Photo" />
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Edit", "Edit", new { id=tp.id }) |
         </td>
     </tr>
 }

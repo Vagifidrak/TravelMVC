@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -2050,7 +2050,7 @@ body {
           width: 100%;
           opacity: 0.9; }
       #Tours .tours-all .tour-box .tour-right .tour-right-text {
-        padding: 55px 92px 0 28px; }
+        padding: 0px 92px 0 28px; }
         #Tours .tours-all .tour-box .tour-right .tour-right-text a {
           font-size: 24px;
           color: #151515;
